@@ -1,0 +1,69 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaTabBinding.Views.MainView">
+  <Grid RowDefinitions="Auto, *">
+    <StackPanel Orientation="Vertical"
+                Grid.Row="0">
+      <TextBlock FontSize="14"
+                 Text="Hello! I am the main view with the tab control!"/>
+      <StackPanel Orientation="Horizontal">
+        <Label Content="The currently selected tab index is: "
+               IsVisible="{Binding HasTabs}"/>
+        <Label Content="{Binding SelectedTabIndex}"
+               IsVisible="{Binding HasTabs}"/>
+        <Label Content="No tabs available. Add a new tab!"
+               IsVisible="{Binding !HasTabs}"/>
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Button Content="Add Tab A"
+                Command="{Binding AddTabTypeA}"/>
+        <Button Content="Add Tab B"
+                Command="{Binding AddTabTypeB}"/>
+      </StackPanel>
+    </StackPanel>
+    <TabControl Grid.Row="1"
+                Items="{Binding Tabs}"
+                SelectedIndex="{Binding SelectedTabIndex}"
+                IsVisible="{Binding HasTabs, Mode=OneWay}"
+                Background="#EEEEEE">
+      <TabControl.ItemTemplate>
+        <DataTemplate>
+          <Grid DragDrop.AllowDrop="True"
+                PointerPressed="TabClick">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="{Binding TabName, Mode=OneWay}"
+                    VerticalAlignment="Center"
+                    Margin="0,0,0,2"
+                    Grid.Column="0"
+                    FontSize="14"
+                    Classes="TabTextHeader"/>
+            <Button Content="X"
+                    Classes="TabCloseButton"
+                    Grid.Column="1"
+                    FontSize="12"
+                    Height="20"
+                    Width="20"
+                    Padding="0"
+                    Margin="6,0,0,0"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    BorderBrush="Transparent"
+                    BorderThickness="0"
+                    Background="Transparent"
+                    VerticalAlignment="Center"
+                    Name="TabCloseButton"
+                    Command="{Binding $parent[UserControl].DataContext.CloseTab}"
+                    CommandParameter="{Binding}"
+                    IsEnabled="{Binding !IsRunningAction}" />
+          </Grid>
+        </DataTemplate>
+      </TabControl.ItemTemplate>
+    </TabControl>
+  </Grid>
+</UserControl>

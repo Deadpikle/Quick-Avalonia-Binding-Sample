@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloniaSampleBinding", "AvaloniaSampleBinding\AvaloniaSampleBinding.csproj", "{BDFFD960-4627-4EC4-B472-A140692694D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaloniaSampleBinding", "AvaloniaSampleBinding\AvaloniaSampleBinding.csproj", "{BDFFD960-4627-4EC4-B472-A140692694D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloniaTabBinding", "AvaloniaTabBinding\AvaloniaTabBinding.csproj", "{72E7DE3D-42BB-4DA5-9031-8592F8BE7253}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BDFFD960-4627-4EC4-B472-A140692694D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDFFD960-4627-4EC4-B472-A140692694D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDFFD960-4627-4EC4-B472-A140692694D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72E7DE3D-42BB-4DA5-9031-8592F8BE7253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E7DE3D-42BB-4DA5-9031-8592F8BE7253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E7DE3D-42BB-4DA5-9031-8592F8BE7253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E7DE3D-42BB-4DA5-9031-8592F8BE7253}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
