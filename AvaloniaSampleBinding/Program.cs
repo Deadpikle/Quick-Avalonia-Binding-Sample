@@ -1,6 +1,5 @@
 ﻿using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
-using Avalonia.Logging.Serilog;
 using System;
 
 namespace AvaloniaSampleBinding
@@ -17,6 +16,6 @@ namespace AvaloniaSampleBinding
         public static AppBuilder BuildAvaloniaApp()
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
-                .LogToDebug();
+                .LogToTrace();
     }
 }

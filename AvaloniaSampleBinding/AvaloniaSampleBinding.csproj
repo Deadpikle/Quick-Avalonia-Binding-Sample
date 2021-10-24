@@ -1,10 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.9.12" />
-    <PackageReference Include="Avalonia.Desktop" Version="0.9.12" />
+    <PackageReference Include="Avalonia" Version="0.10.8" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.8" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.8" />
   </ItemGroup>
 </Project>
