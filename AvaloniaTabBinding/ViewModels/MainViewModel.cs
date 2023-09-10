@@ -56,12 +56,12 @@ namespace AvaloniaTabBinding.ViewModels
             SelectLastTab();
         }
 
-        public void CloseTab(ITabItem item)
+        public void CloseTab(object item)
         {
-            if (!item.IsRunningAction)
+            if (item is ITabItem tab && !tab.IsRunningAction)
             {
-                item.Cleanup();
-                Tabs.Remove(item);
+                tab.Cleanup();
+                Tabs.Remove(tab);
             }
         }
 

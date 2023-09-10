@@ -25,7 +25,7 @@
       </StackPanel>
     </StackPanel>
     <TabControl Grid.Row="1"
-                Items="{Binding Tabs}"
+                ItemsSource="{Binding Tabs}"
                 SelectedIndex="{Binding SelectedTabIndex}"
                 IsVisible="{Binding HasTabs, Mode=OneWay}"
                 Background="#EEEEEE">

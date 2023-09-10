@@ -7,25 +7,20 @@ using AvaloniaTabBinding.ViewModels;
 
 namespace AvaloniaTabBinding.Views
 {
-    public class MainView : UserControl
+    public partial class MainView : UserControl
     {
         public MainView()
         {
             this.InitializeComponent();
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
-
         public void TabClick(object sender, PointerPressedEventArgs e)
         {
             if (e.GetCurrentPoint(this).Properties.IsMiddleButtonPressed)
             {
-                if (DataContext is MainViewModel && sender is IVisual)
+                if (DataContext is MainViewModel && sender is Visual)
                 {
-                    var button = (sender as IVisual)?.FindDescendantOfType<Button>();
+                    var button = (sender as Visual)?.FindDescendantOfType<Button>();
                     button?.Command.Execute(button?.CommandParameter);
                 }
             }

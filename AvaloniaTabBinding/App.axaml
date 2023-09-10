@@ -2,9 +2,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="AvaloniaTabBinding.App"
              xmlns:views="clr-namespace:AvaloniaTabBinding.Views"
-             xmlns:viewModels="clr-namespace:AvaloniaTabBinding.ViewModels">
+             xmlns:viewModels="clr-namespace:AvaloniaTabBinding.ViewModels"
+             RequestedThemeVariant="Light">
     <Application.Styles>
-        <FluentTheme Mode="Light"/>
+        <FluentTheme/>
     </Application.Styles>
     <Application.DataTemplates>
       <DataTemplate DataType="{x:Type viewModels:MainViewModel}">
