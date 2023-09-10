@@ -10,9 +10,6 @@ namespace AvaloniaTabBinding
         public MainWindow()
         {
             InitializeComponent();
-#if DEBUG
-            this.AttachDevTools();
-#endif
             DataContext = new MainWindowViewModel();
         }
 
